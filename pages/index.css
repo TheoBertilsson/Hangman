@@ -1,7 +1,6 @@
 @font-face {
   font-family: Madimi;
-  src: url('../src/MadimiOne-Regular.ttf')
-    format("truetype");
+  src: url("../src/MadimiOne-Regular.ttf") format("truetype");
 }
 * {
   box-sizing: border-box;
@@ -31,6 +30,12 @@ header {
 header h1 {
   font-size: 6vh;
   margin: 1vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #__next {
@@ -154,4 +159,15 @@ p {
 
 .notificationBox.show {
   transform: translateY(-50px);
+}
+
+.playBtn {
+  padding: 3vh;
+  width: 20vh;
+  font-size: 5vh;
+  color: #34495e;
+  margin-top: 60%;
+}
+.playBtn:hover {
+  color: #2980b9;
 }

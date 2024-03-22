@@ -1,23 +1,31 @@
 import React, { useEffect } from "react";
 
-const PopUpWindow = ({ correctLetters, wrongLetters, word, setPlayable, playAgain}) => {
+const PopUpWindow = ({
+  correctLetters,
+  wrongLetters,
+  word,
+  setPlayable,
+  playAgain,
+}) => {
   let finalMessage = "";
   let revealWord = "";
   let playable = true;
 
   function checkWin(correctL, wrongL, corrWord) {
-    let status = "win";
+    if (corrWord.length > 0) {
+      let status = "win";
 
-    corrWord.split("").forEach((letter) => {
-      if (!correctL.includes(letter)) {
-        status = "";
+      corrWord.split("").forEach((letter) => {
+        if (!correctL.includes(letter)) {
+          status = "";
+        }
+      });
+      if (wrongL.length === 6) {
+        status = "lost";
       }
-    });
-    if (wrongL.length === 6) {
-      status = "lost";
+      return status;
     }
 
-    return status;
   }
 
   if (checkWin(correctLetters, wrongLetters, word) === "win") {
@@ -33,7 +41,7 @@ const PopUpWindow = ({ correctLetters, wrongLetters, word, setPlayable, playAgai
   return (
     <div
       className="popupBox"
-      style={finalMessage !== "" ? { display: 'flex' } : {}}
+      style={finalMessage !== "" ? { display: "flex" } : {}}
     >
       <div className="popup">
         <h2>{finalMessage}</h2>
