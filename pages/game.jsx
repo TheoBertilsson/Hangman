@@ -13,12 +13,19 @@ function App() {
   const [wrongLetters, setWrongLetters] = useState([])
   const [showNotification, setShowNotification] = useState(false)
 
+  let easyMode = JSON.parse(localStorage.getItem("easyModeChoice"));
+
   function getWord(){
-        fetch('https://random-word-api.herokuapp.com/word')
+    if(easyMode === "on"){
+      let easyWords = ["vanja", "fullstack", "react", "programming"]
+      setWord(easyWords[Math.floor(Math.random() * easyWords.length)]);
+    } else if (easyMode === false){
+      fetch('https://random-word-api.herokuapp.com/word')
         .then((response) => response.json())
         .then((result) => {
           setWord(result[0])
         })
+    }
   }
   useEffect(getWord,[])
   function showBox(){
