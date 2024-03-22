@@ -1,3 +1,2 @@
-# Hangman
-# Hangman
-# Hangman
+# Hangman, Game. 
+Made in React.
