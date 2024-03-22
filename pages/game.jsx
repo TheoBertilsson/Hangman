@@ -5,6 +5,7 @@ import Word from "../components/Word.jsx";
 import PopUpWindow from "../components/PopUpWindow.js";
 import AlreadyPressedNotification from "../components/AlreadyPressedNotification.js";
 import Layout from "../components/layout.jsx";
+import HomeBtn from "../components/HomeBtn.js";
 
 function App() {
   const [word, setWord] = useState('')
@@ -70,6 +71,7 @@ function App() {
 
   return (
       <Layout>
+        <HomeBtn></HomeBtn>
         <div className="gameBox">
             <HangPole wrongLetters={wrongLetters}/>
             <WrongLettersBox wrongLetters={wrongLetters} />

@@ -53,7 +53,7 @@ p {
 .gameBox {
   padding: 20px 30px;
   position: relative;
-  margin: auto;
+  margin: 10vh auto;
   height: 350px;
   width: 450px;
 }
@@ -72,18 +72,22 @@ p {
 .wrongLettersBox {
   position: absolute;
   top: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
+  right: -70px;
+  text-align: center;
+  background-color: #bcd7e7;
+  color: #34495e;
+  width: 22vh;
+  padding: 1vh;
+  border-radius: 12px;
 }
 
 .wrongLettersBox p {
   margin: 0 0 5px;
+  font-size: 20px;
 }
 
 .wrongLettersBox span {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .word {
@@ -161,29 +165,32 @@ p {
   transform: translateY(-50px);
 }
 
+/*  Play Button on Home page*/
 .playBtn {
   padding: 3vh;
   width: 20vh;
   font-size: 5vh;
   color: #34495e;
-  margin-top: 60%;
+  margin-top: 25vh;
 }
 .playBtn:hover {
   color: #2980b9;
 }
 
+/*  Slider EasyMode */
 .easyModeBox {
   display: flex;
   position: absolute;
   justify-content: flex-end;
   align-items: center;
   gap: 5px;
-  top: 15%;
+  top: 20%;
   right: 2%;
 }
 
 .easyModeText {
   margin-right: 2vh;
+  font-size: 2vh;
   color: whitesmoke;
 }
 
@@ -244,4 +251,18 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/*  HomeBtn on Game Page  */
+.homeBtn {
+  color: #34495e;
+  font-size: 1.5rem;
+  text-decoration: none !important;
+  background-color: #bcd7e7;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  border-radius: 17px;
+  position: absolute;
+  top: 20%;
+  left: 5%;
 }
