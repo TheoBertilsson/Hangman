@@ -26,6 +26,7 @@ header {
   padding: 0.5vh;
   margin: 0;
   text-align: center;
+  color: whitesmoke;
 }
 header h1 {
   font-size: 6vh;
@@ -165,16 +166,35 @@ p {
   transform: translateY(-50px);
 }
 
-/*  Play Button on Home page*/
+/*  Play Button on Home page & Leaderboard  */
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .playBtn {
   padding: 3vh;
   width: 20vh;
   font-size: 5vh;
-  color: #34495e;
-  margin-top: 25vh;
+  color: #29394a;
+  background-color: #bcd7e7;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
 }
-.playBtn:hover {
-  color: #2980b9;
+.playBtn:hover,
+.leaderBoardBtn:hover {
+  color: #71848f;
+}
+.leaderBoardBtn {
+  margin-top: 3vh;
+  background-color: #bcd7e7;
+  color: #29394a;
+  border-radius: 12px;
+  padding: 1vh;
+  text-align: center;
+  text-decoration: none;
 }
 
 /*  Slider EasyMode */
@@ -231,7 +251,7 @@ p {
 }
 
 input:checked + .slider {
-  background-color: #2196f3;
+  background-color: #2980b9;
 }
 
 input:focus + .slider {
@@ -265,4 +285,45 @@ input:checked + .slider:before {
   position: absolute;
   top: 20%;
   left: 5%;
+}
+
+/*  Footer  */
+footer {
+  background-color: #34495e;
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+  width: 100%;
+  bottom: 0;
+}
+footer div {
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #34495e;
+  align-items: center;
+}
+.icons {
+  height: 6vh;
+  width: 6vh;
+}
+#githubIcon {
+  color: #bcd7e7;
+}
+#linkedInIcon {
+  color: #bcd7e7;
+}
+#githubIcon:hover {
+  color: #71848f;
+}
+#linkedInIcon:hover {
+  color: #71848f;
+}
+
+/*  Laoyout Body  */
+.layoutBody {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  flex-direction: column;
 }

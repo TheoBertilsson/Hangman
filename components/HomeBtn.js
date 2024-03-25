@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { House, HouseFill } from 'react-bootstrap-icons';
+import { HouseFill } from 'react-bootstrap-icons';
 
 const HomeBtn = () => {
   return (
