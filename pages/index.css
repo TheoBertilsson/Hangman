@@ -327,3 +327,24 @@ footer div {
   height: 100vh;
   flex-direction: column;
 }
+table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+tr {
+  display: flex;
+  justify-content: space-evenly;
+}
+th {
+  font-size: 6vh;
+  padding: 6vh;
+  text-decoration: underline;
+}
+td {
+  font-size: 4vh;
+  padding-right: 7vh;
+  padding-left: 7vh;
+}
